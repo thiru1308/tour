@@ -12,11 +12,11 @@ const Navbar = () => {
       <h1 className="navbar-logo">Trippy</h1>
       <div className="Menu-icons">
         <i
-          className={clicked ? "fas fa-bars" : "fas fa-times"}
+          className={clicked ? "fas fa-times" : "fas fa-bars"}
           onClick={handleClick}
         ></i>
       </div>
-      <ul className={clicked ? "nav-menu" : "nav-menu active"}>
+      <ul className={clicked ? "nav-menu active" : "nav-menu"}>
         {Menuitems.map((item, index) => {
           return (
             <li key={index}>
