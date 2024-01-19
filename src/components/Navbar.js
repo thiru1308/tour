@@ -1,6 +1,7 @@
 import "./NavbarStyles.css";
 import { Menuitems } from "./Menuitems";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [clicked, setClicked] = useState(false);
@@ -9,7 +10,7 @@ const Navbar = () => {
   };
   return (
     <nav className="NavbarItems">
-      <h1 className="navbar-logo">Trippy</h1>
+      <h1 className="navbar-logo">TourLanka</h1>
       <div className="Menu-icons">
         <i
           className={clicked ? "fas fa-times" : "fas fa-bars"}
@@ -20,10 +21,10 @@ const Navbar = () => {
         {Menuitems.map((item, index) => {
           return (
             <li key={index}>
-              <a className={item.cName} href={item.url}>
+              <Link className={item.cName} to={item.url}>
                 <i className={item.icon}></i>
                 {item.title}
-              </a>
+              </Link>
             </li>
           );
         })}
